@@ -1,0 +1,5 @@
+{
+  "name": "LongAnimation Boilerplate",
+  "description": "A reusable boilerplate project page for showcasing research, inspired by the LongAnimation paper. It features sections for abstract, gallery, comparisons, and experiments, built with React and Tailwind CSS.",
+  "requestFramePermissions": []
+}
