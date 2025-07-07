@@ -1,12 +1,13 @@
 {
-  "name": "longanimation-boilerplate",
+  "name": "A-Multi-Strategy-Approach-for-AI-Generated-Text-Detection-Page",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.1.0",
