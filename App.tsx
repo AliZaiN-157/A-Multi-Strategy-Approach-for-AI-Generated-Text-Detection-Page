@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Navigation from './components/Navigation';
 import Section from './components/Section';
 import { sectionsData } from './constants';
-import type { SectionId, SectionData, TableHeaderCell } from './types';
+import type { SectionId, SectionData } from './types';
 
 const App: React.FC = () => {
   const [isNavSticky, setIsNavSticky] = useState(false);
@@ -64,18 +64,24 @@ const App: React.FC = () => {
                   {section.table.headers.map((headerRow, rowIndex) => (
                     <tr key={rowIndex}>
                       {headerRow.map((cell, cellIndex) => {
-                        const isObj = typeof cell === 'object' && cell !== null;
-                        const content = isObj ? cell.content : cell;
-                        const colSpan = isObj ? cell.colSpan : undefined;
-                        const rowSpan = isObj ? cell.rowSpan : undefined;
+                        if (typeof cell === 'object' && cell !== null) {
+                          return (
+                            <th
+                              key={cellIndex}
+                              colSpan={cell.colSpan}
+                              rowSpan={cell.rowSpan}
+                              className="border-b border-gray-300 px-4 py-3 font-medium text-gray-700"
+                            >
+                              {cell.content}
+                            </th>
+                          );
+                        }
                         return (
                           <th
                             key={cellIndex}
-                            colSpan={colSpan}
-                            rowSpan={rowSpan}
                             className="border-b border-gray-300 px-4 py-3 font-medium text-gray-700"
                           >
-                            {content}
+                            {cell}
                           </th>
                         );
                       })}

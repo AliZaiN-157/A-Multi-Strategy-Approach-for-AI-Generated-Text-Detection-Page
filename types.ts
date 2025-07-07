@@ -13,12 +13,18 @@ export type TableRow = (string | number)[];
 export interface TableData {
   headers: TableHeaderCell[][];
   rows: TableRow[];
-  caption: string;
+  caption:string;
 }
 
 export interface ReferenceItem {
   id: string;
   html: string;
+}
+
+export interface ComparisonItem {
+  label: string;
+  type: 'video' | 'image';
+  src: string;
 }
 
 export interface SectionData {
@@ -28,10 +34,4 @@ export interface SectionData {
   figures?: FigureData[];
   table?: TableData;
   references?: ReferenceItem[];
-}
-
-export interface ComparisonItem {
-  label: string;
-  type: 'video' | 'image';
-  src: string;
 }
