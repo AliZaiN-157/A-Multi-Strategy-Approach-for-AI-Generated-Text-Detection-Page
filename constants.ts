@@ -20,9 +20,9 @@ export const sectionsData: SectionData[] = [
       "System 3: Llama-Feature Ensemble with Transformer Classifier (Candace): The third system (Figure 3), named Candace, is more experimental. It involves a two-stage process. First, probabilistic features (alpha, beta, gamma, as described in Section 4.3) are extracted from each token of the input text using multiple Llama-3.2 models. These feature vectors are concatenated. Second, this sequence of combined Llama-derived features is processed by a custom Transformer Encoder-based classification head, which then makes the final human/machine prediction.",
     ],
     figures: [
-      { src: '/images/roberta.png', caption: 'Figure 1: Architecture of System 1: ROBERTa-based Classifier.' },
-      { src: '/images/svm.png', caption: 'Figure 2: Architecture of System 2: TF-IDF + SVM Classifier.' },
-      { src: '/images/candace.png', caption: 'Figure 3: Architecture of System 3: Candace - Llama-Feature Ensemble with Transformer Classifier.' },
+      { src: 'public/images/roberta.png', caption: 'Figure 1: Architecture of System 1: ROBERTa-based Classifier.' },
+      { src: 'public/images/svm.png', caption: 'Figure 2: Architecture of System 2: TF-IDF + SVM Classifier.' },
+      { src: 'public/images/candace.png', caption: 'Figure 3: Architecture of System 3: Candace - Llama-Feature Ensemble with Transformer Classifier.' },
     ],
   },
   {
