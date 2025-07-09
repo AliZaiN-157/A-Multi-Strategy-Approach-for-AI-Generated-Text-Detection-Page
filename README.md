@@ -1,14 +1,34 @@
-# Run and deploy your AI Studio app
+# Website
 
-This contains everything you need to run your app locally.
+A modern React-based website built with TypeScript and Vite.
 
-## Run Locally
+## Features
 
-**Prerequisites:**  Node.js
+- Modular component structure
+- TypeScript for type safety
+- Fast development with Vite
+- Responsive design
 
+## Getting Started
 
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+   ```
+   npm install
+   ```
+2. Start the development server:
+   ```
+   npm run dev
+   ```
+
+## Project Structure
+
+- `components/` – Reusable React components
+- `public/` – Static assets
+- `App.tsx` – Main application entry
+- `constants.ts` / `types.ts` – Shared constants and types
+
+## Scripts
+
+- `npm run dev` – Start development server
+- `npm run build` – Build for production
+- `npm run preview` – Preview production build

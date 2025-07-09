@@ -40,12 +40,26 @@ const App: React.FC = () => {
         {section.content && (
           <div className="space-y-4 text-gray-700 leading-relaxed text-justify">
             {section.content.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
+              <div key={index}>
+                <p>{paragraph}</p>
+                {section.figures && section.figures[index] && (
+                  <figure className="text-center my-8">
+                    <img
+                      src={section.figures[index].src}
+                      alt={section.figures[index].caption}
+                      className="max-w-full md:max-w-2xl mx-auto rounded-lg shadow-md border "
+                    />
+                    <figcaption className="mt-4 text-sm text-gray-600 italic">
+                      {section.figures[index].caption}
+                    </figcaption>
+                  </figure>
+                )}
+              </div>
             ))}
           </div>
         )}
 
-        {section.figures && (
+        {/* {section.figures && (
           <div className="space-y-12 pt-4">
             {section.figures.map((figure, index) => (
               <figure key={index} className="text-center">
@@ -54,7 +68,7 @@ const App: React.FC = () => {
               </figure>
             ))}
           </div>
-        )}
+        )} */}
 
         {section.table && (
           <figure className="max-w-full mx-auto">
